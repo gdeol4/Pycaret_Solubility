@@ -248,7 +248,7 @@ if st.sidebar.button("ADA Boost"):
     st.title("ADA Boost ⁠— metrics and results")
     st.header("About the Algorithm")
     st.write("Boosting is a method of converting weak learners into strong learners. In boosting, each new tree is a fit on a modified version of the original data set. The AdaBoost Algorithm begins by training a decision tree in which each observation is assigned an equal weight. After evaluating the first tree, we increase the weights of those observations that are difficult to classify and lower the weights for those that are easy to classify. The second tree is therefore grown on this weighted data. Here, the idea is to improve upon the predictions of the first tree. Our new model is therefore Tree 1 + Tree 2. ")
-    st.image("ada.png")
+    st.image("adaboost.jpg")
     st.write("We then compute the classification error from this new 2-tree ensemble model and grow a third tree to predict the revised residuals. We repeat this process for a specified number of iterations. Subsequent trees help us to classify observations that are not well classified by the previous trees. Predictions of the final ensemble model is therefore the weighted sum of the predictions made by the previous tree models.")
 
     st.header("Training data model results")
