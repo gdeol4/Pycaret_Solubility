@@ -131,8 +131,6 @@ if st.sidebar.button("Logistic regression"):
     lr_results = pull()
     st.write(lr_results)
 
-    gc.collect()
-
     with st.beta_expander("1. See the AUC ROC curve"):
     #ROC AUC
         st.header("Plotting training AUC ROC curves for logistic regression")
