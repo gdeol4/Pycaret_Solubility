@@ -1,1 +1,2 @@
-libXrender1
+libSM
+libXext
