@@ -2,3 +2,4 @@ streamlit==0.78.0
 numpy
 pandas
 pycaret==2.3
+libxrender1
