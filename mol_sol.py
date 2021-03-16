@@ -4,7 +4,7 @@ import io
 import base64
 import numpy as np
 import pandas as pd
-from rdkit import Chem
+import rdkit
 from rdkit.Chem import PandasTools, AllChem, DataStructs, RDConfig
 import pycaret
 from pycaret.classification import *
