@@ -77,7 +77,6 @@ if st.button('Start here with the example dataset'):
 
     results = model_comparison()
 
-    gc.collect()
 
     # execute example functions
     model_setup(train_df)
@@ -128,9 +127,11 @@ if st.sidebar.button("Logistic regression"):
 
     model_setup(train_df)
 
-    lr_model = create_model('lightgbm')
+    lr_model = create_model('lr')
     lr_results = pull()
     st.write(lr_results)
+
+    gc.collect()
 
     with st.beta_expander("1. See the AUC ROC curve"):
     #ROC AUC
