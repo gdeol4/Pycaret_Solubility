@@ -111,7 +111,6 @@ if st.button('Start here with the example dataset'):
     test = pull()
     st.write(test)
 
-    gc.collect()
 # Logistic regression model
 if st.sidebar.button("Logistic regression"):
 
@@ -157,7 +156,6 @@ if st.sidebar.button("Logistic regression"):
         lr_test = pull()
         st.write(lr_test)
 
-    gc.collect()
 # Light GBM model
 if st.sidebar.button("Light GBM"):
 
@@ -203,8 +201,6 @@ if st.sidebar.button("Light GBM"):
         lightgbm_test = pull()
         st.write(lightgbm_test)
 
-    gc.collect()
-
 
 # Ridge regression model
 if st.sidebar.button("Ridge regression"):
@@ -247,7 +243,6 @@ if st.sidebar.button("Ridge regression"):
         ridge_test = pull()
         st.write(ridge_test)
 
-    gc.collect()
 
 # ADA Boost model
 if st.sidebar.button("ADA Boost"):
@@ -297,7 +292,6 @@ if st.sidebar.button("ADA Boost"):
         st.write(ada_test)
 
 
-    gc.collect()
 # Gradient Boosting model
 if st.sidebar.button("Gradient Boosting"):
 
@@ -346,7 +340,6 @@ if st.sidebar.button("Gradient Boosting"):
         st.write(gbc_test)
 
 
-    gc.collect()
 # K Nearest Neighbors model
 if st.sidebar.button("K Nearest Neighbors"):
 
@@ -388,7 +381,6 @@ if st.sidebar.button("K Nearest Neighbors"):
         st.write(knn_test)
 
 
-    gc.collect()
 # SVM - Linear Kernel model
 if st.sidebar.button("SVM ⁠— Linear Kernel"):
 
@@ -429,7 +421,6 @@ if st.sidebar.button("SVM ⁠— Linear Kernel"):
         st.write(svm_test)
 
 
-    gc.collect()
 # Decision Tree model
 if st.sidebar.button("Decision Tree"):
 
@@ -476,7 +467,6 @@ if st.sidebar.button("Decision Tree"):
         dt_test = pull()
         st.write(dt_test)
 
-    gc.collect()
 # Naive Bayes model
 if st.sidebar.button("Naive Bayes"):
 
