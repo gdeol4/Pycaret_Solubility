@@ -53,7 +53,6 @@ test_data = np.concatenate([test_x, test_target], axis=1)
 train_df = pd.DataFrame(train_data, columns=columns)
 test_df = pd.DataFrame(test_data, columns=columns)
 
-
 # Sidebar intro
 st.sidebar.title("Model sandbox")
 st.sidebar.markdown("**Choose a machine learning algorithm from below to see details about each**")
@@ -74,11 +73,11 @@ if st.button('Start here with the example dataset'):
         results = pull(best_model)
         return results
 
-    results = model_comparison()
-
-
     # execute example functions
     model_setup(train_df)
+
+    results = model_comparison()
+
     st.dataframe(results.style.highlight_max(axis=0))
 
     # Random forest information and results
