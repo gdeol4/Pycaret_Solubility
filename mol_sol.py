@@ -54,6 +54,7 @@ test_data = np.concatenate([test_x, test_target], axis=1)
 train_df = pd.DataFrame(train_data, columns=columns)
 test_df = pd.DataFrame(test_data, columns=columns)
 
+gc.collect()
 # Sidebar intro
 st.sidebar.title("Model sandbox")
 st.sidebar.markdown("**Choose a machine learning algorithm from below to see details about each**")
