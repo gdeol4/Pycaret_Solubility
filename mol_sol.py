@@ -27,7 +27,6 @@ train_mols = [m for m in Chem.SDMolSupplier(traindir)]
 test_mols = [m for m in Chem.SDMolSupplier(testdir)]
 
 #Function to generate molecular fingerprints from SMILES
-@st.cache(ttl=5,max_entries=2)
 def mol2fp(mol, radi=2, nBits=1024):
     fp = AllChem.GetMorganFingerprintAsBitVect(mol, radius=radi, nBits=nBits)
     arr = np.zeros((0,))
@@ -69,7 +68,6 @@ if st.button('Start here with the example dataset'):
     def model_setup(train_df):
         setup(data=train_df, target='target', silent = True, session_id=123)
 
-    #@st.cache(ttl=5,max_entries=2)
     def model_comparison():
         best_model = compare_models()
         results = pull(best_model)
