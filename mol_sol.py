@@ -5,6 +5,7 @@ import base64
 import numpy as np
 import pandas as pd
 import rdkit
+import gc
 from rdkit import Chem
 from rdkit.Chem import PandasTools, AllChem, DataStructs, RDConfig
 import pycaret
@@ -74,6 +75,8 @@ if st.button('Start here with the example dataset'):
         return results
 
     results = model_comparison()
+
+    gc.collect()
 
     # execute example functions
     model_setup(train_df)
@@ -155,6 +158,8 @@ if st.sidebar.button("Logistic regression"):
         lr_test = pull()
         st.write(lr_test)
 
+    gc.collect()
+
 # Light GBM model
 if st.sidebar.button("Light GBM"):
 
@@ -200,6 +205,7 @@ if st.sidebar.button("Light GBM"):
         lightgbm_test = pull()
         st.write(lightgbm_test)
 
+    gc.collect()
 # Ridge regression model
 if st.sidebar.button("Ridge regression"):
 
@@ -241,6 +247,7 @@ if st.sidebar.button("Ridge regression"):
         ridge_test = pull()
         st.write(ridge_test)
 
+    gc.collect()
 # ADA Boost model
 if st.sidebar.button("ADA Boost"):
 
@@ -288,6 +295,7 @@ if st.sidebar.button("ADA Boost"):
         ada_test = pull()
         st.write(ada_test)
 
+    gc.collect()
 # Gradient Boosting model
 if st.sidebar.button("Gradient Boosting"):
 
@@ -335,6 +343,7 @@ if st.sidebar.button("Gradient Boosting"):
         gbc_test = pull()
         st.write(gbc_test)
 
+    gc.collect()
 # K Nearest Neighbors model
 if st.sidebar.button("K Nearest Neighbors"):
 
@@ -375,6 +384,7 @@ if st.sidebar.button("K Nearest Neighbors"):
         knn_test = pull()
         st.write(knn_test)
 
+    gc.collect()
 # SVM - Linear Kernel model
 if st.sidebar.button("SVM ⁠— Linear Kernel"):
 
@@ -414,6 +424,7 @@ if st.sidebar.button("SVM ⁠— Linear Kernel"):
         svm_test = pull()
         st.write(svm_test)
 
+    gc.collect()
 # Decision Tree model
 if st.sidebar.button("Decision Tree"):
 
@@ -459,7 +470,7 @@ if st.sidebar.button("Decision Tree"):
         evaluate_model(dt_model)
         dt_test = pull()
         st.write(dt_test)
-
+    gc.collect()
 # Naive Bayes model
 if st.sidebar.button("Naive Bayes"):
 
