@@ -1,5 +1,5 @@
 streamlit==0.78.0
-numpy
+numpy==1.20.1
 pandas
 pycaret==2.3
 libxrender1
