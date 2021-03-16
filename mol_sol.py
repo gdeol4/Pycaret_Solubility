@@ -69,7 +69,7 @@ if st.button('Start here with the example dataset'):
     def model_setup(train_df):
         setup(data=train_df, target='target', silent = True, session_id=123)
 
-    @st.cache(ttl=5,max_entries=2)
+    #@st.cache(ttl=5,max_entries=2)
     def model_comparison():
         best_model = compare_models()
         results = pull(best_model)
