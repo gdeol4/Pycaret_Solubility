@@ -5,7 +5,6 @@ import base64
 import numpy as np
 import pandas as pd
 import rdkit
-import
 from rdkit import Chem
 from rdkit.Chem import PandasTools, AllChem, DataStructs, RDConfig
 import pycaret
