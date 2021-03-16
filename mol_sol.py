@@ -53,7 +53,7 @@ test_data = np.concatenate([test_x, test_target], axis=1)
 train_df = pd.DataFrame(train_data, columns=columns)
 test_df = pd.DataFrame(test_data, columns=columns)
 
- .collect()
+
 # Sidebar intro
 st.sidebar.title("Model sandbox")
 st.sidebar.markdown("**Choose a machine learning algorithm from below to see details about each**")
@@ -202,7 +202,7 @@ if st.sidebar.button("Light GBM"):
         lightgbm_test = pull()
         st.write(lightgbm_test)
 
-     .collect()
+
 # Ridge regression model
 if st.sidebar.button("Ridge regression"):
 
@@ -244,7 +244,7 @@ if st.sidebar.button("Ridge regression"):
         ridge_test = pull()
         st.write(ridge_test)
 
-     .collect()
+
 # ADA Boost model
 if st.sidebar.button("ADA Boost"):
 
@@ -292,7 +292,7 @@ if st.sidebar.button("ADA Boost"):
         ada_test = pull()
         st.write(ada_test)
 
-     .collect()
+
 # Gradient Boosting model
 if st.sidebar.button("Gradient Boosting"):
 
@@ -340,7 +340,7 @@ if st.sidebar.button("Gradient Boosting"):
         gbc_test = pull()
         st.write(gbc_test)
 
-     .collect()
+
 # K Nearest Neighbors model
 if st.sidebar.button("K Nearest Neighbors"):
 
@@ -381,7 +381,7 @@ if st.sidebar.button("K Nearest Neighbors"):
         knn_test = pull()
         st.write(knn_test)
 
-     .collect()
+
 # SVM - Linear Kernel model
 if st.sidebar.button("SVM ⁠— Linear Kernel"):
 
@@ -421,7 +421,7 @@ if st.sidebar.button("SVM ⁠— Linear Kernel"):
         svm_test = pull()
         st.write(svm_test)
 
-     .collect()
+
 # Decision Tree model
 if st.sidebar.button("Decision Tree"):
 
@@ -467,7 +467,7 @@ if st.sidebar.button("Decision Tree"):
         evaluate_model(dt_model)
         dt_test = pull()
         st.write(dt_test)
-     .collect()
+
 # Naive Bayes model
 if st.sidebar.button("Naive Bayes"):
 
